@@ -1,0 +1,6 @@
+[submodule "pcb/Adafruit-Eagle-Library"]
+	path = pcb/Adafruit-Eagle-Library
+	url = https://github.com/adafruit/Adafruit-Eagle-Library.git
+[submodule "pcb/SparkFun-Eagle-Libraries"]
+	path = pcb/SparkFun-Eagle-Libraries
+	url = https://github.com/sparkfun/SparkFun-Eagle-Libraries.git

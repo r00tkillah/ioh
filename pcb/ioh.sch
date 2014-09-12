@@ -2394,6 +2394,74 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-LED">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find discrete LEDs for illumination or indication, but no displays.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="LTE-302">
+<wire x1="2.159" y1="0.762" x2="2.159" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="2.159" y1="-0.762" x2="0.762" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="0.762" y1="-0.762" x2="0.381" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-0.762" x2="-0.381" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="-0.762" x2="-0.762" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-0.762" y1="-0.762" x2="-2.159" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-2.159" y1="-0.762" x2="-2.159" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-2.159" y1="0.762" x2="-0.381" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="0.762" x2="0.381" y2="0.762" width="0.127" layer="21"/>
+<wire x1="0.381" y1="0.762" x2="2.159" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="0" x2="0.381" y2="0.762" width="0.127" layer="21"/>
+<wire x1="0.381" y1="0.762" x2="0.381" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-0.762" x2="-0.381" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="0" x2="-0.381" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="0" x2="-0.381" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="0.762" y1="-0.762" x2="-0.762" y2="-0.762" width="0.127" layer="21" curve="-180"/>
+<pad name="A" x="1.27" y="0" drill="0.8"/>
+<pad name="C" x="-1.27" y="0" drill="0.8"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LTE-302">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.048" x2="1.27" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.048" x2="2.286" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.048" x2="1.778" y2="-2.794" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.032" x2="1.27" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.032" x2="2.286" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.032" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<text x="3.556" y="-3.048" size="1.27" layer="94">&gt;VALUE</text>
+<text x="3.556" y="-1.016" size="1.27" layer="94">&gt;NAME</text>
+<pin name="A" x="0" y="2.54" visible="off" length="short" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LTE-302" prefix="D" uservalue="yes">
+<description>Through-hole side-firing 940nm IR LED</description>
+<gates>
+<gate name="G$1" symbol="LTE-302" x="0" y="1.016"/>
+</gates>
+<devices>
+<device name="" package="LTE-302">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2424,10 +2492,25 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="20k"/>
+<part name="D1" library="SparkFun-LED" deviceset="LTE-302" device=""/>
+<part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="20k"/>
+<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="2N7000"/>
+<part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="D2" library="SparkFun-LED" deviceset="LTE-302" device=""/>
+<part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="20k"/>
+<part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="2N7000"/>
+<part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="-132.08" y="180.34" size="1.778" layer="91">TODO
+ VIBE
+ BUTTON
+ RECV
+ FTDI</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="48.26" y="71.12"/>
@@ -2450,6 +2533,16 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="GND4" gate="1" x="-38.1" y="68.58"/>
 <instance part="SUPPLY5" gate="G$1" x="-38.1" y="106.68"/>
 <instance part="R1" gate="G$1" x="-38.1" y="99.06" rot="R90"/>
+<instance part="D1" gate="G$1" x="-96.52" y="172.72"/>
+<instance part="SUPPLY6" gate="G$1" x="-96.52" y="193.04"/>
+<instance part="R2" gate="G$1" x="-96.52" y="185.42" rot="R90"/>
+<instance part="Q2" gate="G$1" x="-96.52" y="157.48"/>
+<instance part="GND5" gate="1" x="-96.52" y="144.78"/>
+<instance part="D2" gate="G$1" x="-30.48" y="172.72"/>
+<instance part="SUPPLY7" gate="G$1" x="-30.48" y="193.04"/>
+<instance part="R3" gate="G$1" x="-30.48" y="185.42" rot="R90"/>
+<instance part="Q3" gate="G$1" x="-30.48" y="157.48"/>
+<instance part="GND6" gate="1" x="-30.48" y="144.78"/>
 </instances>
 <busses>
 </busses>
@@ -2613,6 +2706,16 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="-38.1" y1="76.2" x2="-38.1" y2="71.12" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="Q2" gate="G$1" pin="S"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="-96.52" y1="152.4" x2="-96.52" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Q3" gate="G$1" pin="S"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="-30.48" y1="152.4" x2="-30.48" y2="147.32" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCCIO" class="0">
 <segment>
@@ -2681,6 +2784,16 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-38.1" y1="106.68" x2="-38.1" y2="104.14" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="SUPPLY6" gate="G$1" pin="VCC"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="-96.52" y1="193.04" x2="-96.52" y2="190.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY7" gate="G$1" pin="VCC"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-30.48" y1="193.04" x2="-30.48" y2="190.5" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -2732,9 +2845,57 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="-33.02" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="D1" gate="G$1" pin="A"/>
+<wire x1="-96.52" y1="180.34" x2="-96.52" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="D1" gate="G$1" pin="C"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
+<wire x1="-96.52" y1="167.64" x2="-96.52" y2="162.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="TXBACK" class="0">
+<segment>
+<pinref part="Q3" gate="G$1" pin="G"/>
+<wire x1="-38.1" y1="157.48" x2="-53.34" y2="157.48" width="0.1524" layer="91"/>
+<label x="-53.34" y="157.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="-30.48" y1="180.34" x2="-30.48" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="C"/>
+<pinref part="Q3" gate="G$1" pin="D"/>
+<wire x1="-30.48" y1="167.64" x2="-30.48" y2="162.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="TXFRONT" class="0">
+<segment>
+<pinref part="Q2" gate="G$1" pin="G"/>
+<wire x1="-104.14" y1="157.48" x2="-119.38" y2="157.48" width="0.1524" layer="91"/>
+<label x="-119.38" y="157.48" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
