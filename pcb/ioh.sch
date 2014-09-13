@@ -3475,12 +3475,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="20k"/>
-<part name="D1" library="SparkFun-LED" deviceset="LTE-302" device=""/>
+<part name="IRFRONT" library="SparkFun-LED" deviceset="LTE-302" device=""/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="20k"/>
 <part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="2N7000"/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="D2" library="SparkFun-LED" deviceset="LTE-302" device=""/>
+<part name="IRBACK" library="SparkFun-LED" deviceset="LTE-302" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="20k"/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="2N7000"/>
@@ -3492,7 +3492,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="10UF-25V-20%(PTH)" device="KIT" value="10uF"/>
-<part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
+<part name="BZZ" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="Q4" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="2N7000"/>
@@ -3503,8 +3503,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheet>
 <plain>
 <text x="-132.08" y="180.34" size="1.778" layer="91">TODO
- BUTTON
- FTDI</text>
+ FTDI
+ TEST POINTS</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="48.26" y="71.12"/>
@@ -3527,12 +3527,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND4" gate="1" x="-38.1" y="68.58"/>
 <instance part="SUPPLY5" gate="G$1" x="-38.1" y="106.68"/>
 <instance part="R1" gate="G$1" x="-38.1" y="99.06" rot="R90"/>
-<instance part="D1" gate="G$1" x="-96.52" y="172.72"/>
+<instance part="IRFRONT" gate="G$1" x="-96.52" y="172.72"/>
 <instance part="SUPPLY6" gate="G$1" x="-96.52" y="193.04"/>
 <instance part="R2" gate="G$1" x="-96.52" y="185.42" rot="R90"/>
 <instance part="Q2" gate="G$1" x="-96.52" y="157.48"/>
 <instance part="GND5" gate="1" x="-96.52" y="144.78"/>
-<instance part="D2" gate="G$1" x="-30.48" y="172.72"/>
+<instance part="IRBACK" gate="G$1" x="-30.48" y="172.72"/>
 <instance part="SUPPLY7" gate="G$1" x="-30.48" y="193.04"/>
 <instance part="R3" gate="G$1" x="-30.48" y="185.42" rot="R90"/>
 <instance part="Q3" gate="G$1" x="-30.48" y="157.48"/>
@@ -3544,7 +3544,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND8" gate="1" x="-86.36" y="91.44"/>
 <instance part="SUPPLY9" gate="G$1" x="-99.06" y="114.3"/>
 <instance part="C1" gate="G$1" x="139.7" y="53.34"/>
-<instance part="JP3" gate="G$1" x="30.48" y="175.26" rot="R180"/>
+<instance part="BZZ" gate="G$1" x="30.48" y="175.26" rot="R180"/>
 <instance part="SUPPLY10" gate="G$1" x="15.24" y="190.5"/>
 <instance part="GND9" gate="1" x="15.24" y="152.4"/>
 <instance part="Q4" gate="G$1" x="15.24" y="162.56"/>
@@ -3813,7 +3813,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-30.48" y1="193.04" x2="-30.48" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="BZZ" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="175.26" x2="15.24" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="SUPPLY10" gate="G$1" pin="VCC"/>
 <wire x1="15.24" y1="175.26" x2="15.24" y2="190.5" width="0.1524" layer="91"/>
@@ -3872,13 +3872,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$4" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="IRFRONT" gate="G$1" pin="A"/>
 <wire x1="-96.52" y1="180.34" x2="-96.52" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="C"/>
+<pinref part="IRFRONT" gate="G$1" pin="C"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="-96.52" y1="167.64" x2="-96.52" y2="162.56" width="0.1524" layer="91"/>
 </segment>
@@ -3899,13 +3899,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$24" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="D2" gate="G$1" pin="A"/>
+<pinref part="IRBACK" gate="G$1" pin="A"/>
 <wire x1="-30.48" y1="180.34" x2="-30.48" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
-<pinref part="D2" gate="G$1" pin="C"/>
+<pinref part="IRBACK" gate="G$1" pin="C"/>
 <pinref part="Q3" gate="G$1" pin="D"/>
 <wire x1="-30.48" y1="167.64" x2="-30.48" y2="162.56" width="0.1524" layer="91"/>
 </segment>
@@ -3954,7 +3954,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$13" class="0">
 <segment>
 <pinref part="Q4" gate="G$1" pin="D"/>
-<pinref part="JP3" gate="G$1" pin="2"/>
+<pinref part="BZZ" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="167.64" x2="15.24" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="172.72" x2="22.86" y2="172.72" width="0.1524" layer="91"/>
 </segment>

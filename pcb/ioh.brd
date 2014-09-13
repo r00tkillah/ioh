@@ -745,10 +745,10 @@ design rules under a new name.</description>
 <element name="LED5" library="adafruit" package="WS2812" value="WS2812" x="-27.94" y="63.5"/>
 <element name="Q1" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="-52.07" y="71.12"/>
 <element name="R1" library="SparkFun-Resistors" package="AXIAL-0.4" value="20k" x="-62.23" y="69.85"/>
-<element name="D1" library="SparkFun-LED" package="LTE-302" value="" x="-66.04" y="-1.27"/>
+<element name="IRFRONT" library="SparkFun-LED" package="LTE-302" value="" x="-66.04" y="-1.27"/>
 <element name="R2" library="SparkFun-Resistors" package="AXIAL-0.4" value="20k" x="-62.23" y="-6.35"/>
 <element name="Q2" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="-64.77" y="-11.43"/>
-<element name="D2" library="SparkFun-LED" package="LTE-302" value="" x="-66.04" y="-24.13"/>
+<element name="IRBACK" library="SparkFun-LED" package="LTE-302" value="" x="-66.04" y="-24.13"/>
 <element name="R3" library="SparkFun-Resistors" package="AXIAL-0.4" value="20k" x="-62.23" y="-21.59"/>
 <element name="Q3" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="-64.77" y="-16.51"/>
 <element name="RXFRONT" library="ioh-1" package="TSOP2438" value="TSOP2438" x="-63.5" y="-27.94"/>
@@ -756,7 +756,7 @@ design rules under a new name.</description>
 <element name="C1" library="SparkFun-Capacitors" package="CPOL-RADIAL-10UF-25V-KIT" value="10uF" x="-72.39" y="-30.48">
 <attribute name="PROD_ID" value="CAP-08440" x="-72.39" y="-30.48" size="1.778" layer="27" display="off"/>
 </element>
-<element name="JP3" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="-72.39" y="-39.37"/>
+<element name="BZZ" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="-72.39" y="-39.37"/>
 <element name="Q4" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="-71.12" y="-46.99"/>
 <element name="S1" library="adafruit" package="B3F-40XX" value="" x="-66.04" y="-58.42">
 <attribute name="OC_NEWARK" value="36K3105" x="-66.04" y="-58.42" size="1.778" layer="27" display="off"/>
@@ -889,7 +889,7 @@ design rules under a new name.</description>
 <contactref element="R1" pad="P$2"/>
 <contactref element="R2" pad="P$2"/>
 <contactref element="R3" pad="P$2"/>
-<contactref element="JP3" pad="1"/>
+<contactref element="BZZ" pad="1"/>
 <wire x1="-57.15" y1="-21.59" x2="-72.39" y2="-39.37" width="0" layer="19" extent="1-1"/>
 <wire x1="-57.15" y1="-6.35" x2="-57.15" y2="-21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-60.42" y1="40.64" x2="-57.15" y2="-6.35" width="0" layer="19" extent="1-1"/>
@@ -934,11 +934,11 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$4">
 <contactref element="R2" pad="P$1"/>
-<contactref element="D1" pad="A"/>
+<contactref element="IRFRONT" pad="A"/>
 <wire x1="-64.77" y1="-1.27" x2="-67.31" y2="-6.35" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
-<contactref element="D1" pad="C"/>
+<contactref element="IRFRONT" pad="C"/>
 <contactref element="Q2" pad="3"/>
 <wire x1="-67.31" y1="-1.27" x2="-63.5" y2="-11.43" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -951,11 +951,11 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$24">
 <contactref element="R3" pad="P$1"/>
-<contactref element="D2" pad="A"/>
+<contactref element="IRBACK" pad="A"/>
 <wire x1="-64.77" y1="-24.13" x2="-67.31" y2="-21.59" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$25">
-<contactref element="D2" pad="C"/>
+<contactref element="IRBACK" pad="C"/>
 <contactref element="Q3" pad="3"/>
 <wire x1="-63.5" y1="-16.51" x2="-67.31" y2="-24.13" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -982,7 +982,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$13">
 <contactref element="Q4" pad="3"/>
-<contactref element="JP3" pad="2"/>
+<contactref element="BZZ" pad="2"/>
 <wire x1="-69.85" y1="-39.37" x2="-69.85" y2="-46.99" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIBE">
