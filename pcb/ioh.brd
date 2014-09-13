@@ -331,6 +331,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 </package>
+<package name="1X01">
+<wire x1="1.27" y1="0.635" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="-0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="1.1938" y="1.8288" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
 </packages>
 </library>
 <library name="adafruit">
@@ -764,6 +778,9 @@ design rules under a new name.</description>
 <attribute name="MF" value="OMRON COMPONENTS USA" x="-66.04" y="-58.42" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="176434" x="-66.04" y="-58.42" size="1.778" layer="27" display="off"/>
 </element>
+<element name="VCC" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="-72.39" y="-68.58"/>
+<element name="VCCIO" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="-72.39" y="-76.2"/>
+<element name="GND" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="-72.39" y="-83.82"/>
 </elements>
 <signals>
 <signal name="N$5">
@@ -845,6 +862,8 @@ design rules under a new name.</description>
 <contactref element="Q4" pad="1"/>
 <contactref element="S1" pad="3"/>
 <contactref element="S1" pad="4"/>
+<contactref element="GND" pad="1"/>
+<wire x1="-72.2884" y1="-60.9092" x2="-72.39" y2="-83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-59.7916" y1="-60.9092" x2="-72.2884" y2="-60.9092" width="0" layer="19" extent="1-1"/>
 <wire x1="-72.39" y1="-46.99" x2="-72.2884" y2="-60.9092" width="0" layer="19" extent="1-1"/>
 <wire x1="-73.66" y1="-30.48" x2="-72.39" y2="-46.99" width="0" layer="19" extent="1-1"/>
@@ -869,8 +888,10 @@ design rules under a new name.</description>
 <contactref element="RXFRONT" pad="VS"/>
 <contactref element="RXBACK" pad="VS"/>
 <contactref element="C1" pad="1"/>
-<wire x1="-60.96" y1="-33.02" x2="-71.12" y2="-30.48" width="0" layer="19" extent="1-1"/>
+<contactref element="VCCIO" pad="1"/>
+<wire x1="-60.96" y1="-33.02" x2="-72.39" y2="-76.2" width="0" layer="19" extent="1-1"/>
 <wire x1="-60.96" y1="-27.94" x2="-60.96" y2="-33.02" width="0" layer="19" extent="1-1"/>
+<wire x1="-71.12" y1="-30.48" x2="-60.96" y2="-33.02" width="0" layer="19" extent="1-1"/>
 <wire x1="-40.22" y1="11.43" x2="-60.96" y2="-27.94" width="0" layer="19" extent="1-1"/>
 <wire x1="-36.4" y1="27.62" x2="-40.22" y2="11.43" width="0" layer="19" extent="1-1"/>
 <wire x1="-34.82" y1="46.99" x2="-36.4" y2="27.62" width="0" layer="19" extent="1-1"/>
@@ -890,6 +911,8 @@ design rules under a new name.</description>
 <contactref element="R2" pad="P$2"/>
 <contactref element="R3" pad="P$2"/>
 <contactref element="BZZ" pad="1"/>
+<contactref element="VCC" pad="1"/>
+<wire x1="-72.39" y1="-39.37" x2="-72.39" y2="-68.58" width="0" layer="19" extent="1-1"/>
 <wire x1="-57.15" y1="-21.59" x2="-72.39" y2="-39.37" width="0" layer="19" extent="1-1"/>
 <wire x1="-57.15" y1="-6.35" x2="-57.15" y2="-21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-60.42" y1="40.64" x2="-57.15" y2="-6.35" width="0" layer="19" extent="1-1"/>
