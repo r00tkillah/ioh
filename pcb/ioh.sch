@@ -168,6 +168,18 @@
 <text x="-8.89" y="-8.89" size="0.4064" layer="25">&gt;Name</text>
 <text x="-8.89" y="-10.16" size="0.4064" layer="27">&gt;Value</text>
 </package>
+<package name="TSOP2438">
+<pad name="OUT" x="-2.54" y="0" drill="0.8"/>
+<pad name="GND" x="0" y="0" drill="0.8"/>
+<pad name="VS" x="2.54" y="0" drill="0.8"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="3.81" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-1.27" x2="3.81" y2="1.27" width="0.127" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="-3.81" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="21" curve="-180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MESHBEE">
@@ -197,6 +209,20 @@
 <pin name="AD3" x="20.32" y="7.62" length="middle" rot="R180"/>
 <pin name="SCL" x="20.32" y="10.16" length="middle" rot="R180"/>
 <pin name="SDA" x="20.32" y="12.7" length="middle" rot="R180"/>
+</symbol>
+<symbol name="TSOP2438">
+<description>CIR 38khz side looking IR</description>
+<wire x1="0" y1="5.08" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94" curve="-180"/>
+<pin name="OUT" x="12.7" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="GND" x="12.7" y="0" length="middle" direction="pwr" rot="R180"/>
+<pin name="VS" x="12.7" y="-2.54" length="middle" direction="pwr" rot="R180"/>
+<text x="0" y="-7.62" size="1.778" layer="94">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -228,6 +254,23 @@
 <connect gate="G$1" pin="TX0" pad="11"/>
 <connect gate="G$1" pin="TX1" pad="2"/>
 <connect gate="G$1" pin="VDD" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TSOP2438">
+<gates>
+<gate name="G$1" symbol="TSOP2438" x="-5.08" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSOP2438">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
+<connect gate="G$1" pin="VS" pad="VS"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2502,6 +2545,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/4W" value="20k"/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="2N7000"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="RXFRONT" library="ioh-1" deviceset="TSOP2438" device=""/>
+<part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
+<part name="RXBACK" library="ioh-1" deviceset="TSOP2438" device=""/>
+<part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="VCCIO" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2543,6 +2592,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="R3" gate="G$1" x="-30.48" y="185.42" rot="R90"/>
 <instance part="Q3" gate="G$1" x="-30.48" y="157.48"/>
 <instance part="GND6" gate="1" x="-30.48" y="144.78"/>
+<instance part="RXFRONT" gate="G$1" x="-121.92" y="116.84" rot="R270"/>
+<instance part="GND7" gate="1" x="-121.92" y="91.44"/>
+<instance part="SUPPLY8" gate="G$1" x="-134.62" y="114.3"/>
+<instance part="RXBACK" gate="G$1" x="-86.36" y="116.84" rot="R270"/>
+<instance part="GND8" gate="1" x="-86.36" y="91.44"/>
+<instance part="SUPPLY9" gate="G$1" x="-99.06" y="114.3"/>
 </instances>
 <busses>
 </busses>
@@ -2716,6 +2771,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="-30.48" y1="152.4" x2="-30.48" y2="147.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="RXFRONT" gate="G$1" pin="GND"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="-121.92" y1="104.14" x2="-121.92" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="RXBACK" gate="G$1" pin="GND"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="-86.36" y1="104.14" x2="-86.36" y2="93.98" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCCIO" class="0">
 <segment>
@@ -2736,6 +2801,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="22.86" y1="83.82" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="91.44" x2="22.86" y2="83.82" width="0.1524" layer="91"/>
 <junction x="22.86" y="83.82"/>
+</segment>
+<segment>
+<pinref part="SUPPLY8" gate="G$1" pin="VCCIO"/>
+<wire x1="-134.62" y1="114.3" x2="-134.62" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="99.06" x2="-124.46" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="RXFRONT" gate="G$1" pin="VS"/>
+<wire x1="-124.46" y1="99.06" x2="-124.46" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY9" gate="G$1" pin="VCCIO"/>
+<wire x1="-99.06" y1="114.3" x2="-99.06" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="99.06" x2="-88.9" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="RXBACK" gate="G$1" pin="VS"/>
+<wire x1="-88.9" y1="99.06" x2="-88.9" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -2885,6 +2964,22 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="Q2" gate="G$1" pin="G"/>
 <wire x1="-104.14" y1="157.48" x2="-119.38" y2="157.48" width="0.1524" layer="91"/>
 <label x="-119.38" y="157.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RXFRONT" class="0">
+<segment>
+<pinref part="RXFRONT" gate="G$1" pin="OUT"/>
+<wire x1="-119.38" y1="104.14" x2="-119.38" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="99.06" x2="-106.68" y2="99.06" width="0.1524" layer="91"/>
+<label x="-111.76" y="99.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RXBACK" class="0">
+<segment>
+<pinref part="RXBACK" gate="G$1" pin="OUT"/>
+<wire x1="-83.82" y1="104.14" x2="-83.82" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="99.06" x2="-71.12" y2="99.06" width="0.1524" layer="91"/>
+<label x="-76.2" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
