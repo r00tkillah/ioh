@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -716,7 +716,6 @@
 <rectangle x1="1.35128125" y1="8.407909375" x2="3.350259375" y2="8.525509375" layer="201"/>
 <rectangle x1="7.350759375" y1="8.525509375" x2="8.4074" y2="8.6431125" layer="200"/>
 <rectangle x1="8.64361875" y1="8.525509375" x2="8.760459375" y2="8.6431125" layer="200"/>
-<text x="0" y="-0.586740625" size="0.23621875" layer="201" font="vector">/home/r00tkillah/Downloads/pdxbsides-3.bmp</text>
 </package>
 </packages>
 <symbols>
