@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.003125" unitdist="mic" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1471,11 +1471,26 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="54.61" y="-0.635" size="1.27" layer="27"/>
 </element>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="19.05" y="25.4"/>
-<element name="BLINK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="20.32" y="2.54" rot="R90"/>
-<element name="RX-BACK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="12.7" y="2.54" rot="R90"/>
-<element name="RX-FRONT" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="10.16" y="2.54" rot="R90"/>
-<element name="TX-BACK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="15.24" y="2.54" rot="R90"/>
-<element name="TX-FRONT" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="17.78" y="2.54" rot="R90"/>
+<element name="BLINK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="20.32" y="2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.200515625" y="4.2679875" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="21.971" y="1.5875" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="RX-BACK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="12.7" y="2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.94654375" y="1.122728125" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="14.351" y="1.5875" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="RX-FRONT" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="10.16" y="2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="8.46818125" y="4.41350625" size="0.4064" layer="25" rot="R270"/>
+<attribute name="VALUE" x="11.811" y="1.5875" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="TX-BACK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="15.24" y="2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="16.491090625" y="4.4225" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="16.899075" y="1.603659375" size="0.4064" layer="27" rot="R90"/>
+</element>
+<element name="TX-FRONT" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="17.78" y="2.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="19.374909375" y="1.097471875" size="0.4064" layer="25" rot="R180"/>
+<attribute name="VALUE" x="19.431" y="1.5875" size="0.4064" layer="27" rot="R90"/>
+</element>
 <element name="JP3" library="SparkFun-Connectors" package="FTDI_DEVICE_SIDE" value="FTDI_DEVICE" x="13.97" y="39.37" rot="R180"/>
 <element name="JP4" library="SparkFun-Connectors" package="1X03_LOCK" value="" x="20.32" y="35.56" rot="R180"/>
 <element name="U$2" library="ioh-1" package="BSIDES" value="BSIDES" x="2.54" y="27.94"/>
