@@ -1413,34 +1413,63 @@ Please make sure your boards conform to these design rules.</description>
 <element name="BAT2" library="SparkFun-Electromechanical" package="BATTCOM_20MM_PTH" value="" x="64.77" y="12.7" rot="R90"/>
 <element name="JP1" library="SparkFun-Connectors" package="1X10" value="M10&quot;" x="24.13" y="25.4" rot="R270"/>
 <element name="JP2" library="SparkFun-Connectors" package="1X10" value="M10&quot;" x="52.07" y="2.54" rot="R90"/>
-<element name="LED2" library="adafruit" package="WS2812" value="WS2812" x="26.67" y="38.1"/>
-<element name="LED3" library="adafruit" package="WS2812" value="WS2812" x="34.29" y="38.1"/>
-<element name="LED4" library="adafruit" package="WS2812" value="WS2812" x="41.91" y="38.1"/>
-<element name="LED5" library="adafruit" package="WS2812" value="WS2812" x="49.53" y="38.1"/>
-<element name="QBLINK" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="36.83" y="30.48"/>
+<element name="LED2" library="adafruit" package="WS2812" value="WS2812" x="26.67" y="38.1" smashed="yes">
+<attribute name="VALUE" x="24.67" y="34" size="1.27" layer="27" font="vector"/>
+</element>
+<element name="LED3" library="adafruit" package="WS2812" value="WS2812" x="34.29" y="38.1" smashed="yes">
+<attribute name="VALUE" x="32.29" y="34" size="1.27" layer="27" font="vector"/>
+</element>
+<element name="LED4" library="adafruit" package="WS2812" value="WS2812" x="41.91" y="38.1" smashed="yes">
+<attribute name="VALUE" x="39.91" y="34" size="1.27" layer="27" font="vector"/>
+</element>
+<element name="LED5" library="adafruit" package="WS2812" value="WS2812" x="49.53" y="38.1" smashed="yes">
+<attribute name="VALUE" x="47.53" y="34" size="1.27" layer="27" font="vector"/>
+</element>
+<element name="QBLINK" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="36.83" y="30.48" smashed="yes">
+<attribute name="NAME" x="35.79339375" y="28.1129" size="0.4064" layer="25" ratio="10"/>
+<attribute name="VALUE" x="40.005" y="29.21" size="0.4064" layer="27" ratio="10"/>
+</element>
 <element name="R1" library="SparkFun-Resistors" package="AXIAL-0.4" value="20k" x="57.15" y="34.29" rot="R90"/>
 <element name="IRFRONT" library="SparkFun-LED" package="LTE-302" value="" x="1.27" y="27.94" rot="R270"/>
 <element name="R2" library="SparkFun-Resistors" package="AXIAL-0.4" value="20k" x="54.61" y="34.29" rot="R90"/>
-<element name="QFRONT" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="49.53" y="30.48"/>
+<element name="QFRONT" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="49.53" y="30.48" smashed="yes">
+<attribute name="NAME" x="49.296159375" y="28.2059875" size="0.4064" layer="25" ratio="10"/>
+<attribute name="VALUE" x="52.705" y="29.21" size="0.4064" layer="27" ratio="10"/>
+</element>
 <element name="IRBACK" library="SparkFun-LED" package="LTE-302" value="" x="78.74" y="27.94" rot="R90"/>
 <element name="R3" library="SparkFun-Resistors" package="AXIAL-0.4" value="20k" x="77.47" y="19.05" rot="R90"/>
-<element name="QBACK" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="43.18" y="30.48"/>
+<element name="QBACK" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="43.18" y="30.48" smashed="yes">
+<attribute name="NAME" x="40.898528125" y="28.2059875" size="0.4064" layer="25" ratio="10"/>
+<attribute name="VALUE" x="46.355" y="29.21" size="0.4064" layer="27" ratio="10"/>
+</element>
 <element name="RXFRONT" library="ioh-1" package="TSOP2438" value="TSOP2438" x="1.27" y="35.56" rot="R270"/>
 <element name="RXBACK" library="ioh-1" package="TSOP2438" value="TSOP2438" x="78.74" y="35.56" rot="R90"/>
 <element name="C1" library="SparkFun-Capacitors" package="CPOL-RADIAL-10UF-25V-KIT" value="10uF" x="2.54" y="3.81">
 <attribute name="PROD_ID" value="CAP-08440" x="36.83" y="-86.36" size="1.778" layer="27" display="off"/>
 </element>
 <element name="BZZ" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="3.81" y="27.94" rot="R270"/>
-<element name="QVIBE" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="30.48" y="30.48"/>
+<element name="QVIBE" library="SparkFun-DiscreteSemi" package="TO-92" value="MOSFET-NCHANNEL2N7000" x="30.48" y="30.48" smashed="yes">
+<attribute name="NAME" x="29.60068125" y="28.167740625" size="0.4064" layer="25" ratio="10"/>
+<attribute name="VALUE" x="33.655" y="29.21" size="0.4064" layer="27" ratio="10"/>
+</element>
 <element name="S1" library="adafruit" package="B3F-40XX" value="" x="67.31" y="33.02">
 <attribute name="OC_NEWARK" value="36K3105" x="119.38" y="-8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="B3F-4000" x="119.38" y="-8.89" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="OMRON COMPONENTS USA" x="119.38" y="-8.89" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="176434" x="119.38" y="-8.89" size="1.778" layer="27" display="off"/>
 </element>
-<element name="VCC" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="76.2" y="2.54"/>
-<element name="VCCIO" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="72.39" y="24.13"/>
-<element name="GND" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="55.88" y="2.54"/>
+<element name="VCC" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="76.2" y="2.54" smashed="yes">
+<attribute name="NAME" x="74.8538" y="4.3688" size="1.27" layer="25"/>
+<attribute name="VALUE" x="74.93" y="-0.635" size="1.27" layer="27"/>
+</element>
+<element name="VCCIO" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="72.39" y="24.13" smashed="yes">
+<attribute name="NAME" x="69.7738" y="20.8788" size="1.27" layer="25"/>
+<attribute name="VALUE" x="71.12" y="20.955" size="1.27" layer="27"/>
+</element>
+<element name="GND" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="55.88" y="2.54" smashed="yes">
+<attribute name="NAME" x="54.5338" y="4.3688" size="1.27" layer="25"/>
+<attribute name="VALUE" x="54.61" y="-0.635" size="1.27" layer="27"/>
+</element>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="19.05" y="25.4"/>
 <element name="BLINK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="20.32" y="2.54" rot="R90"/>
 <element name="RX-BACK" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER-PAD-2-NC_BY_TRACE" x="12.7" y="2.54" rot="R90"/>
