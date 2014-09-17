@@ -1588,7 +1588,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="RXBACK" pad="VS"/>
 <wire x1="24.13" y1="25.4" x2="24.13" y2="30.48" width="0.4064" layer="1"/>
 <via x="24.13" y="30.48" extent="1-16" drill="0.6" shape="square"/>
-<via x="24.13" y="30.48" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="24.13" y1="30.48" x2="17.78" y2="30.48" width="0.4064" layer="16"/>
 <via x="17.78" y="30.48" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="17.78" y1="35.687" x2="17.78" y2="30.48" width="0.4064" layer="1"/>
@@ -2018,16 +2017,16 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 </signals>
 <errors>
-<approved hash="19,1,1bcf1422fd85f596"/>
 <approved hash="19,1,1894ec56c09133ad"/>
-<approved hash="19,1,6096405aa99c18af"/>
+<approved hash="19,1,1bcf1422fd85f596"/>
 <approved hash="19,1,b7cd6c2fd6899c94"/>
+<approved hash="19,1,6096405aa99c18af"/>
 <approved hash="19,1,6fcf4c5857ffaf95"/>
 <approved hash="19,1,4097982c9aeb99ad"/>
 <approved hash="19,1,48948c32dbf51eac"/>
 <approved hash="19,1,7bce4446d0e1ee96"/>
-<approved hash="19,1,0bcd747241d05194"/>
 <approved hash="19,1,7896fc0364c18faf"/>
+<approved hash="19,1,0bcd747241d05194"/>
 </errors>
 </board>
 </drawing>
