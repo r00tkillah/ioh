@@ -53,14 +53,17 @@ void ws2812_setup()
 	 * a bit is encoded with 4 bits, making a 500ns slice
 	 * and a 2000ns bit cycle
 	 * slave enable seems useless, since we just use data out
+	 *
+	 * The ws2812 is a 5v part, and we use a transistor hooked to a pullup,
+	 * so that effectively inverts our signal.
 	 */
 	vAHI_SpiConfigure(
 			0     /* u8SlaveEnable    */,
 			false /* bLsbFirst        */,
-			false /* bPolarity        */,
+			true  /* bPolarity        */,
 			false /* bPhase           */,
 			4     /* u8ClockDivider   */,
-			true  /* bInterruptEnable */,
+			false /* bInterruptEnable */,
 			false /* bAutoSlaveSelect */);
 }
 
