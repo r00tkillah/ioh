@@ -1234,37 +1234,46 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="LaenPCBOrder">
-<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+<designrules name="DFRobot_Eagle_Rule_v0.4">
+<description language="en">
+
+&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-Die Standard-Design-Rules sind so gewählt, dass sie für 
-die meisten Anwendungen passen. Sollte ihre Platine 
-besondere Anforderungen haben, treffen Sie die erforderlichen
-Einstellungen hier und speichern die Design Rules unter 
-einem neuen Namen ab.</description>
-<description language="en">&lt;b&gt;Laen's PCB Order Design Rules&lt;/b&gt;
+The default Design Rules have been set to cover
+a wide range of applications. Your particular design
+may have different requirements, so please make the
+necessary adjustments and save your customized
+design rules under a new name.
+</description>
+<description language="it">
+
+&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-Please make sure your boards conform to these design rules.</description>
+The default Design Rules have been set to cover
+a wide range of applications. Your particular design
+may have different requirements, so please make the
+necessary adjustments and save your customized
+design rules under a new name.</description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm"/>
-<param name="mtIsolate" value="1.5011mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm"/>
+<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
 <param name="mdWireWire" value="6mil"/>
 <param name="mdWirePad" value="6mil"/>
 <param name="mdWireVia" value="6mil"/>
 <param name="mdPadPad" value="6mil"/>
 <param name="mdPadVia" value="6mil"/>
 <param name="mdViaVia" value="6mil"/>
-<param name="mdSmdPad" value="6mil"/>
-<param name="mdSmdVia" value="6mil"/>
-<param name="mdSmdSmd" value="6mil"/>
+<param name="mdSmdPad" value="0mil"/>
+<param name="mdSmdVia" value="0mil"/>
+<param name="mdSmdSmd" value="0mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="15mil"/>
-<param name="mdDrill" value="6mil"/>
+<param name="mdCopperDimension" value="10mil"/>
+<param name="mdDrill" value="10mil"/>
 <param name="mdSmdStop" value="0mil"/>
 <param name="msWidth" value="6mil"/>
-<param name="msDrill" value="13mil"/>
-<param name="msMicroVia" value="13mil"/>
+<param name="msDrill" value="12mil"/>
+<param name="msMicroVia" value="12mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -1273,15 +1282,15 @@ Please make sure your boards conform to these design rules.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="7mil"/>
+<param name="rlMinPadTop" value="12mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="7mil"/>
+<param name="rlMinPadInner" value="10mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="7mil"/>
+<param name="rlMinPadBottom" value="12mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="7mil"/>
+<param name="rlMinViaOuter" value="8mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="7mil"/>
+<param name="rlMinViaInner" value="8mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -1294,11 +1303,11 @@ Please make sure your boards conform to these design rules.</description>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="3mil"/>
-<param name="mlMaxStopFrame" value="3mil"/>
+<param name="mlMinStopFrame" value="2mil"/>
+<param name="mlMaxStopFrame" value="2mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="25mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1624,9 +1633,30 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="35.56" y1="30.48" x2="35.56" y2="31.75" width="0.1524" layer="1"/>
 <contactref element="JP3" pad="P$5"/>
 <wire x1="1.27" y1="35.56" x2="1.26998125" y2="35.559965625" width="0.1524" layer="16"/>
-<wire x1="7.62" y1="39.37" x2="10.16" y2="39.37" width="0" layer="19" extent="1-1"/>
-<wire x1="1.27" y1="35.56" x2="7.62" y2="39.37" width="0" layer="19" extent="1-1"/>
-<wire x1="27.1" y1="3.27" x2="29.21" y2="30.48" width="0" layer="19" extent="1-1"/>
+<via x="4.534784375" y="13.24535625" extent="1-16" drill="0.305815625"/>
+<via x="6.348696875" y="2.88406875" extent="1-16" drill="0.305815625"/>
+<via x="33.07724375" y="1.976121875" extent="1-16" drill="0.305815625"/>
+<via x="41.29320625" y="2.777253125" extent="1-16" drill="0.305815625"/>
+<via x="45.988040625" y="7.210175" extent="1-16" drill="0.305815625"/>
+<via x="71.86298125" y="2.18975625" extent="1-16" drill="0.305815625"/>
+<via x="78.958584375" y="8.86584375" extent="1-16" drill="0.305815625"/>
+<via x="76.557815625" y="40.483790625" extent="1-16" drill="0.305815625"/>
+<via x="68.28850625" y="40.376975" extent="1-16" drill="0.305815625"/>
+<via x="59.592390625" y="38.0804" extent="1-16" drill="0.305815625"/>
+<via x="45.3478375" y="33.3804375" extent="1-16" drill="0.305815625"/>
+<via x="40.919753125" y="33.43384375" extent="1-16" drill="0.305815625"/>
+<via x="22.72726875" y="35.73041875" extent="1-16" drill="0.305815625"/>
+<via x="11.363634375" y="35.783828125" extent="1-16" drill="0.305815625"/>
+<via x="6.72215" y="36.050871875" extent="1-16" drill="0.305815625"/>
+<via x="3.414428125" y="40.644021875" extent="1-16" drill="0.305815625"/>
+<polygon width="0.4064" layer="1">
+<vertex x="0" y="41.91"/>
+<vertex x="0" y="0"/>
+<vertex x="80.01" y="0"/>
+<vertex x="80.01" y="41.91"/>
+</polygon>
+<via x="20.379853125" y="16.182834375" extent="1-16" drill="0.305815625"/>
+<via x="77.518125" y="20.028259375" extent="1-16" drill="0.305815625"/>
 </signal>
 <signal name="VCCIO">
 <contactref element="JP4" pad="2"/>
@@ -1636,9 +1666,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="RXBACK" pad="VS"/>
 <wire x1="24.13" y1="25.4" x2="24.13" y2="30.48" width="0.4064" layer="1"/>
 <via x="24.13" y="30.48" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="24.13" y1="30.48" x2="17.78" y2="30.48" width="0.4064" layer="16"/>
-<via x="17.78" y="30.48" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="17.78" y1="35.687" x2="17.78" y2="30.48" width="0.4064" layer="1"/>
+<via x="16.730721875" y="29.22498125" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="24.13" y1="25.4" x2="26.67" y2="22.86" width="0.4064" layer="1"/>
 <wire x1="26.67" y1="22.86" x2="26.67" y2="21.7" width="0.4064" layer="1"/>
 <wire x1="26.67" y1="21.7" x2="27.1" y2="21.27" width="0.4064" layer="1"/>
@@ -1656,6 +1684,11 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="26.67" y1="21.59" x2="27.1" y2="21.27" width="0.1524" layer="16"/>
 <via x="15.24" y="33.02" extent="1-16" drill="0.3302"/>
 <via x="66.04" y="31.75" extent="1-16" drill="0.3302"/>
+<wire x1="17.78" y1="30.274259375" x2="16.730721875" y2="29.22498125" width="0.4064" layer="16"/>
+<wire x1="17.985740625" y1="30.48" x2="24.13" y2="30.48" width="0.4064" layer="16"/>
+<wire x1="16.730721875" y1="29.22498125" x2="17.78" y2="30.274259375" width="0.4064" layer="1"/>
+<wire x1="17.78" y1="30.274259375" x2="17.78" y2="35.687" width="0.4064" layer="1"/>
+<wire x1="17.78" y1="30.274259375" x2="17.985740625" y2="30.48" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="VCC">
 <contactref element="BAT2" pad="1"/>
@@ -1823,9 +1856,9 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="R3" pad="P$1"/>
 <contactref element="IRBACK" pad="A"/>
 <wire x1="77.47" y1="27.94" x2="78.74" y2="29.21" width="0.1524" layer="1"/>
-<wire x1="77.47" y1="26.67" x2="77.47" y2="27.94" width="0.1524" layer="1"/>
-<wire x1="78.74" y1="25.4" x2="77.47" y2="26.67" width="0.1524" layer="1"/>
-<wire x1="78.74" y1="15.24" x2="78.74" y2="25.4" width="0.1524" layer="1"/>
+<wire x1="77.47" y1="26.066546875" x2="77.47" y2="27.94" width="0.1524" layer="1"/>
+<wire x1="78.73138125" y1="24.83103125" x2="77.47" y2="26.066546875" width="0.1524" layer="1"/>
+<wire x1="78.74" y1="15.24" x2="78.73138125" y2="24.83103125" width="0.1524" layer="1"/>
 <wire x1="77.47" y1="13.97" x2="78.74" y2="15.24" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$25">
@@ -2059,13 +2092,13 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="12.7" y1="37.973" x2="15.24" y2="35.433" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$7">
-<polygon width="0.4064" layer="16">
-<vertex x="0" y="41.91"/>
-<vertex x="0" y="0"/>
-<vertex x="80.01" y="0"/>
-<vertex x="80.01" y="41.91"/>
-</polygon>
 <wire x1="36.83" y1="30.48" x2="36.83" y2="31.0896" width="0.1524" layer="16"/>
+<polygon width="0.4064" layer="16">
+<vertex x="0.1067" y="41.963409375"/>
+<vertex x="0.1067" y="0.053409375"/>
+<vertex x="80.1167" y="0.053409375"/>
+<vertex x="80.1167" y="41.963409375"/>
+</polygon>
 </signal>
 </signals>
 <errors>
@@ -2073,12 +2106,12 @@ Please make sure your boards conform to these design rules.</description>
 <approved hash="19,1,1bcf1422fd85f596"/>
 <approved hash="19,1,b7cd6c2fd6899c94"/>
 <approved hash="19,1,6096405aa99c18af"/>
-<approved hash="19,1,6fcf4c5857ffaf95"/>
 <approved hash="19,1,4097982c9aeb99ad"/>
-<approved hash="19,1,48948c32dbf51eac"/>
+<approved hash="19,1,6fcf4c5857ffaf95"/>
 <approved hash="19,1,7bce4446d0e1ee96"/>
-<approved hash="19,1,7896fc0364c18faf"/>
+<approved hash="19,1,48948c32dbf51eac"/>
 <approved hash="19,1,0bcd747241d05194"/>
+<approved hash="19,1,7896fc0364c18faf"/>
 </errors>
 </board>
 </drawing>
