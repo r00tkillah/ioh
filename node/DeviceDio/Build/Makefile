@@ -48,7 +48,7 @@ APP_BIN_DIR		?= $(APP_BASE)/Binary
 # User definable make parameters that may be overwritten from the command line
 
 # Default target device is the JN5148, (JN5148J01, JN5142J01, JN5168, JN5164 also valid)
-JENNIC_CHIP ?= JN5148
+JENNIC_CHIP ?= JN5168
 
 # Figure out chip family and short chip name
 ifeq ($(JENNIC_CHIP), JN5168)
@@ -482,6 +482,7 @@ endif
 ##############################################################################
 ##############################################################################
 # Configure for the selected PLatform and stack
+SDK_BASE_DIR=/cygdrive/c/jennic
 include $(SDK_BASE_DIR)/Chip/Common/Build/config.mk
 include $(SDK_BASE_DIR)/Platform/Common/Build/Config.mk
 include $(SDK_BASE_DIR)/Stack/Common/Build/config.mk
