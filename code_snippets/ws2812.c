@@ -14,9 +14,14 @@
  * Both 0 and 1 are encoded as pulses
  * 1000 encodes a 0, with a pulse of 500 ns
  * 1110 encodes a 1, with a pulse of 1500 ns
+ *
+ * The ws2812 is a 5v part, and we use a transistor hooked to a pullup,
+ * so that effectively inverts our signal.
+ *
+ * we're inverted so it's 0111 and 0001
  */
-#define ZEROPULSE 0x8
-#define ONEPULSE  0xE
+#define ZEROPULSE 0x7
+#define ONEPULSE  0x1
 
 static uint32_t encode_byte(const uint8_t input)
 {
@@ -53,14 +58,11 @@ void ws2812_setup()
 	 * a bit is encoded with 4 bits, making a 500ns slice
 	 * and a 2000ns bit cycle
 	 * slave enable seems useless, since we just use data out
-	 *
-	 * The ws2812 is a 5v part, and we use a transistor hooked to a pullup,
-	 * so that effectively inverts our signal.
 	 */
 	vAHI_SpiConfigure(
 			0     /* u8SlaveEnable    */,
 			false /* bLsbFirst        */,
-			true  /* bPolarity        */,
+			false /* bPolarity        */,
 			false /* bPhase           */,
 			4     /* u8ClockDivider   */,
 			false /* bInterruptEnable */,
