@@ -1,0 +1,8 @@
+*~
+*.bin
+*.map
+*.elf
+*.img
+touch.txt
+*.o
+*.d
