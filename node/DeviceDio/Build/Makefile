@@ -407,6 +407,10 @@ ifneq ($(BLD_MIB_DIO_CONTROL), 0)
 APPSRC += MibDioControlDec.c
 APPSRC += MibDioControl.c
 endif
+# Mib Hat files
+APPSRC += MibHatLightsDec.c
+APPSRC += MibHatLights.c
+
 
 # Other files
 #APPSRC += Uart.c
@@ -427,6 +431,7 @@ INCFLAGS += -I$(APP_COMMON_SRC_DIR)
 INCFLAGS += -I$(ADDITIONAL_SRC_DIR) 
 INCFLAGS += -I$(APP_BASE)/MibCommon/Include
 INCFLAGS += -I$(APP_BASE)/MibDio/Include
+INCFLAGS += -I$(APP_BASE)/MibHat/Include
 
 # Application specific include files
 INCFLAGS += -I$(COMPONENTS_BASE_DIR)/JenNet/Include
@@ -491,6 +496,7 @@ include $(SDK_BASE_DIR)/Stack/Common/Build/config.mk
 # App libary folder
 LDFLAGS += -L$(APP_BASE)/MibCommon/Build
 
+echo VERSION=$(VERSION)
 ###############################################################################
 # OND / 2 stage bootloader setup 
 ifneq ($(OND_CHIPSET), 0)
@@ -523,7 +529,7 @@ LDSTACKLIBS := $(addsuffix _$(JENNIC_CHIP),$(STACKLIBS)) $(LDSTACKLIBS)
 
 .PHONY: all clean
 # Path to directories containing application source 
-vpath % $(APP_SRC_DIR):$(APP_COMMON_SRC_DIR):$(ADDITIONAL_SRC_DIR):$(APP_BASE)/MibCommon/Source:$(APP_BASE)/MibDio/Source
+vpath % $(APP_SRC_DIR):$(APP_COMMON_SRC_DIR):$(ADDITIONAL_SRC_DIR):$(APP_BASE)/MibCommon/Source:$(APP_BASE)/MibDio/Source:$(APP_BASE)/MibHat/Source
 
 .PRECIOUS: %.elf
 
