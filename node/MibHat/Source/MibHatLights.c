@@ -137,6 +137,21 @@ PUBLIC void MibHatLights_vSecond(void)
     }
 }
 
+PRIVATE teJIP_Status MibHatLights_eSetLight(uint32 *pu32Light, uint32 u32Val, void *pvCbData)
+{
+    teJIP_Status   eReturn = E_JIP_OK;
+
+    /* Write new value */
+    /* FIXME: implement */
+    /* Read back final value */
+    *pu32Light = u32Val;
+
+    /* Make sure permament data is saved */
+    psMibHatLights->bSaveRecord = TRUE;
+
+    return eReturn;
+}
+
 /****************************************************************************
  *
  * NAME: MibHatLights_eSetLight0
@@ -147,17 +162,7 @@ PUBLIC void MibHatLights_vSecond(void)
  ****************************************************************************/
 PUBLIC teJIP_Status MibHatLights_eSetLight0(uint32 u32Val, void *pvCbData)
 {
-    teJIP_Status   eReturn = E_JIP_OK;
-
-    /* Write new value */
-    /* FIXME: implement */
-    /* Read back final value */
-    psMibHatLights->sPerm.u32Light0 = u32Val;
-    
-    /* Make sure permament data is saved */
-    psMibHatLights->bSaveRecord = TRUE;
-
-    return eReturn;
+  return MibHatLights_eSetLight(&(psMibHatLights->sPerm.u32Light0), u32Val, pvCbData);
 }
 
 /****************************************************************************
@@ -170,18 +175,9 @@ PUBLIC teJIP_Status MibHatLights_eSetLight0(uint32 u32Val, void *pvCbData)
  ****************************************************************************/
 PUBLIC teJIP_Status MibHatLights_eSetLight1(uint32 u32Val, void *pvCbData)
 {
-    teJIP_Status   eReturn = E_JIP_OK;
-
-    /* Write new value */
-    /* FIXME: implement */
-    /* Read back final value */
-    psMibHatLights->sPerm.u32Light1 = u32Val;
-    
-    /* Make sure permament data is saved */
-    psMibHatLights->bSaveRecord = TRUE;
-
-    return eReturn;
+  return MibHatLights_eSetLight(&(psMibHatLights->sPerm.u32Light1), u32Val, pvCbData);
 }
+
 /****************************************************************************
  *
  * NAME: MibHatLights_eSetLight2
@@ -192,17 +188,7 @@ PUBLIC teJIP_Status MibHatLights_eSetLight1(uint32 u32Val, void *pvCbData)
  ****************************************************************************/
 PUBLIC teJIP_Status MibHatLights_eSetLight2(uint32 u32Val, void *pvCbData)
 {
-    teJIP_Status   eReturn = E_JIP_OK;
-
-    /* Write new value */
-    /* FIXME: implement */
-    /* Read back final value */
-    psMibHatLights->sPerm.u32Light2 = u32Val;
-    
-    /* Make sure permament data is saved */
-    psMibHatLights->bSaveRecord = TRUE;
-
-    return eReturn;
+  return MibHatLights_eSetLight(&(psMibHatLights->sPerm.u32Light2), u32Val, pvCbData);
 }
 
 /****************************************************************************
@@ -215,17 +201,7 @@ PUBLIC teJIP_Status MibHatLights_eSetLight2(uint32 u32Val, void *pvCbData)
  ****************************************************************************/
 PUBLIC teJIP_Status MibHatLights_eSetLight3(uint32 u32Val, void *pvCbData)
 {
-    teJIP_Status   eReturn = E_JIP_OK;
-
-    /* Write new value */
-    /* FIXME: implement */
-    /* Read back final value */
-    psMibHatLights->sPerm.u32Light3 = u32Val;
-    
-    /* Make sure permament data is saved */
-    psMibHatLights->bSaveRecord = TRUE;
-
-    return eReturn;
+  return MibHatLights_eSetLight(&(psMibHatLights->sPerm.u32Light3), u32Val, pvCbData);
 }
 
 
